@@ -2,23 +2,23 @@
 
 ## Scrum-roller
 
-- **Product Owner:** [Namn] (även Utvecklare)
-- **Scrum Master:** [Namn] (även Utvecklare)
+- **Product Owner:** [Paulina] (även Utvecklare)
+- **Scrum Master:** [Claudia] (även Utvecklare)
 - **Utvecklare:**
-  - [Namn]
-  - [Namn]
-  - [Namn]
-  - [Namn]
+  - [Paulina]
+  - [Claudia]
+  - [Filo]
+  - [Pia]
 
 ---
 
 ## Sprintmål
 
-[Skriv ett verifierbart sprintmål här.]
+[Vid sprintens slut ska kunden kunna använda en enkel kassaöversikt i CheckoutLite där butiksinformation visas tydligt, totalsumman räknas ut automatiskt, information om fri frakt visas och rabattkoder kontrolleras innan köp.]
 
 ### Agil motivering
 
-[Skriv 2-3 meningar om varför korta feedbackcykler minskar risker och hjälper teamet att upptäcka fel tidigt.]
+[Genom att leverera funktionalitet stegvis kan vi testa att allt fungerar innan fler delar byggs på. Om något inte fungerar som tänkt får vi snabb feedback och kan justera lösningen tidigt istället för att behöva göra stora ändringar i slutet av projektet.]
 
 ---
 
@@ -26,27 +26,27 @@
 
 ### US-1: Butiksidentitet
 
-- **User Story:** Som en kund vill jag ...
-- **Acceptanskriterier:** Funktionen `visaButikInfo()` ...
-- **Ansvarig:** [Namn]
+- **User Story:** Som kund vill jag kunna se butikens namn och vilken valuta som används så att jag känner mig trygg med mitt köp.
+- **Acceptanskriterier:** Funktionen hamtaButikInfo() returnerar butikens namn och valuta, exempelvis "TechStore (SEK)".
+- **Ansvarig:** [Pia]
 
 ### US-2: Totalberäkning
 
-- **User Story:** Som en kund vill jag ...
-- **Acceptanskriterier:** Funktionen `raknaTotal(varusumma)` ...
-- **Ansvarig:** [Namn]
+- **User Story:** Som kund vill jag automatiskt få se totalsumman inklusive moms så att jag vet vad jag faktiskt kommer att betala.
+- **Acceptanskriterier:** Funktionen beraknaPris(summa) lägger på 25 % moms och returnerar det slutliga priset.
+- **Ansvarig:** [Claudia]
 
 ### US-3: Fraktgräns
 
-- **User Story:** Som en kund vill jag ...
-- **Acceptanskriterier:** Funktionen `statusFrakt(total)` ...
-- **Ansvarig:** [Namn]
+- **User Story:** Som kund vill jag veta om min order kvalificerar sig för fri frakt så att jag kan avgöra om jag vill handla mer.
+- **Acceptanskriterier:** Funktionen kontrolleraFrakt(total) returnerar "Fri frakt" när ordervärdet är över 500 kr, annars "49 kr fraktavgift".
+- **Ansvarig:** [Filo]
 
 ### US-4: Kuponghantering
 
-- **User Story:** Som en kund vill jag ...
-- **Acceptanskriterier:** Funktionen `valideraKupong(kod)` ...
-- **Ansvarig:** [Namn]
+- **User Story:** Som kund vill jag kunna ange en rabattkod så att systemet kan kontrollera att koden följer rätt format.
+- **Acceptanskriterier:**  Funktionen verifieraKod(kod) returnerar true om rabattkoden innehåller minst fyra tecken, annars false.
+- **Ansvarig:** [Paulina]
 
 ---
 
@@ -54,10 +54,10 @@
 
 ### Standup-notering
 
-[Skriv en kort notering från dagens standup.]
+[Under dagens standup rapporterade teamet att arbetet går enligt plan. Funktionerna för prisberäkning och fraktstatus är nästan klara, medan rabattkodsfunktionen fortfarande testas.]
 
 ### Sprint-anpassning (Kravändring)
 
-- **Vad:** [Beskriv ändringen]
-- **Vem:** [Vem uppdaterar kravet och vem implementerar?]
-- **Varför sprintmålet håller:** [Varför påverkar ändringen inte sprintmålet?]
+- **Vad:** [Kunden vill att rabattkoder ska fungera oavsett om användaren skriver med stora eller små bokstäver.]
+- **Vem:** [Product Owner uppdaterar kravet och Claudia ansvarar för att justera funktionen så att inmatningen jämförs utan hänsyn till skiftläge]
+- **Varför sprintmålet håller:** [Ändringen är liten och påverkar endast rabattkodsfunktionen. Den kräver ingen omarbetning av övriga delar och påverkar därför inte sprintens leverans.]
